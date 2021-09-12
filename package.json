@@ -28,6 +28,7 @@
     ]
   },
   "dependencies": {
+    "@ant-design/icons": "^4.6.4",
     "react": "^16.12.0"
   },
   "devDependencies": {
