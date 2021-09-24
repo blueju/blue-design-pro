@@ -4,7 +4,9 @@ import { MyButton, MyDropdown, MyMenu, MySpace } from 'blued';
 import { DownOutlined } from '@ant-design/icons';
 
 interface MoreButtonProps {
+  // 按钮显示个数
   showNumber: number;
+  // 按钮间距大小
   spaceSize?: number;
   children?: React.ReactNode;
 }
@@ -12,10 +14,13 @@ interface MoreButtonProps {
 const InternalMoreButton: React.ForwardRefRenderFunction<
   unknown,
   MoreButtonProps
-> = (props, ref) => {
-  const { showNumber = 5, spaceSize = 8, children, ...rest } = props;
-  console.log('showNumber', showNumber);
+> = (props) => {
+  const { showNumber = 4, spaceSize = 8 } = props;
 
+  /**
+   * 渲染可见按钮
+   * @param props
+   */
   function renderVisibleButton(props: MoreButtonProps) {
     const { showNumber } = props;
     return React.Children.map(props.children, (child, index) => {
@@ -25,19 +30,10 @@ const InternalMoreButton: React.ForwardRefRenderFunction<
     });
   }
 
-  function renderInvisibleButton(props: MoreButtonProps) {
-    const { showNumber } = props;
-    return React.Children.map(props.children, (child, index) => {
-      if (index >= showNumber && React.isValidElement(child)) {
-        return React.cloneElement(child, {
-          style: {
-            display: 'none',
-          },
-        });
-      }
-    });
-  }
-
+  /**
+   * 渲染更多操作按钮
+   * @param props
+   */
   function renderMoreButton(props: MoreButtonProps) {
     function getDropdownMenu() {
       return (
@@ -45,10 +41,12 @@ const InternalMoreButton: React.ForwardRefRenderFunction<
           {React.Children.map<unknown, React.ReactNode>(
             props.children,
             (child, index) => {
-              console.log(child);
               if (index >= showNumber && React.isValidElement(child)) {
                 return (
-                  <MyMenu.Item key={index} onClick={child.props.onClick}>
+                  <MyMenu.Item
+                    key={index}
+                    onClick={(e: any) => child.props.onClick(e.domEvent)}
+                  >
                     {child.props.children}
                   </MyMenu.Item>
                 );
@@ -59,7 +57,6 @@ const InternalMoreButton: React.ForwardRefRenderFunction<
       );
     }
 
-    const { showNumber = 4 } = props;
     if (showNumber >= React.Children.count(props.children)) {
       return null;
     } else {
@@ -79,7 +76,6 @@ const InternalMoreButton: React.ForwardRefRenderFunction<
         {renderVisibleButton(props)}
         {renderMoreButton(props)}
       </MySpace>
-      {renderInvisibleButton(props)}
     </>
   );
 };
