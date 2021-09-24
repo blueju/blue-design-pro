@@ -59,14 +59,18 @@ const InternalMoreButton: React.ForwardRefRenderFunction<
       );
     }
 
-    const { showNumber } = props;
-    return (
-      <MyDropdown overlay={getDropdownMenu()}>
-        <MyButton>
-          更多操作 <DownOutlined />
-        </MyButton>
-      </MyDropdown>
-    );
+    const { showNumber = 4 } = props;
+    if (showNumber >= React.Children.count(props.children)) {
+      return null;
+    } else {
+      return (
+        <MyDropdown overlay={getDropdownMenu()}>
+          <MyButton>
+            更多操作 <DownOutlined />
+          </MyButton>
+        </MyDropdown>
+      );
+    }
   }
 
   return (
