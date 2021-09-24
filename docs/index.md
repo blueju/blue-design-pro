@@ -1,7 +1,7 @@
 ---
 hero:
   title: blued-pro
-  desc: 基于公司组件库使用需求，对 [blued](https://github.com/blueju/blued) 二次封装的模板组件
+  desc: 根据公司组件库的使用需求，基于 [blued](https://github.com/blueju/blued) 二次封装的高级组件
   actions:
     - text: 开始
       link: /components
