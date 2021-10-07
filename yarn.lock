@@ -1212,6 +1212,14 @@
     pirates "^4.0.0"
     source-map-support "^0.5.16"
 
+"@babel/runtime-corejs3@^7.11.2":
+  version "7.15.4"
+  resolved "https://registry.nlark.com/@babel/runtime-corejs3/download/@babel/runtime-corejs3-7.15.4.tgz#403139af262b9a6e8f9ba04a6fdcebf8de692bf1"
+  integrity sha1-QDE5ryYrmm6Pm6BKb9zr+N5pK/E=
+  dependencies:
+    core-js-pure "^3.16.0"
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@7.12.5":
   version "7.12.5"
   resolved "https://registry.nlark.com/@babel/runtime/download/@babel/runtime-7.12.5.tgz?cache=0&sync_timestamp=1630618785994&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
@@ -3780,7 +3788,7 @@ core-js-compat@^3.16.0, core-js-compat@^3.16.2, core-js-compat@^3.6.2:
     browserslist "^4.17.3"
     semver "7.0.0"
 
-core-js-pure@^3.8.1:
+core-js-pure@^3.16.0, core-js-pure@^3.8.1:
   version "3.18.2"
   resolved "https://registry.npmmirror.com/core-js-pure/download/core-js-pure-3.18.2.tgz?cache=0&sync_timestamp=1633458674080&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcore-js-pure%2Fdownload%2Fcore-js-pure-3.18.2.tgz#d8cc11d4885ea919f3de776d45e720e4c769d406"
   integrity sha1-2MwR1IheqRnz3ndtRecg5Mdp1AY=
@@ -11489,6 +11497,11 @@ tslib@^1.10.0, tslib@^1.9.0:
   resolved "https://registry.nlark.com/tslib/download/tslib-1.14.1.tgz?cache=0&sync_timestamp=1628722556410&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=
 
+tslib@^2.1.0:
+  version "2.3.1"
+  resolved "https://registry.nlark.com/tslib/download/tslib-2.3.1.tgz?cache=0&sync_timestamp=1628722556410&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+  integrity sha1-6KM1rdXOrlGqJh0ypJAVjvBC7wE=
+
 tty-browserify@0.0.0:
   version "0.0.0"
   resolved "https://registry.npm.taobao.org/tty-browserify/download/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
@@ -12018,6 +12031,15 @@ walker@^1.0.7, walker@~1.0.5:
   integrity sha1-L3+bj9ENZ3JisYqITijRlhjgKPs=
   dependencies:
     makeerror "1.0.x"
+
+wangeditor@^4.7.8:
+  version "4.7.8"
+  resolved "https://registry.nlark.com/wangeditor/download/wangeditor-4.7.8.tgz?cache=0&sync_timestamp=1631189763960&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fwangeditor%2Fdownload%2Fwangeditor-4.7.8.tgz#ad56dad8f9cfd60d27a6cd4341f7b25f4bc6cc91"
+  integrity sha1-rVba2PnP1g0nps1DQfeyX0vGzJE=
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@babel/runtime-corejs3" "^7.11.2"
+    tslib "^2.1.0"
 
 warning@^4.0.1:
   version "4.0.3"
