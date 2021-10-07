@@ -1,3 +1,8 @@
+---
+nav:
+  title: 组件
+---
+
 # MoreButton 更多按钮
 
 <code src="./demo-1.jsx"></code>
