@@ -10,7 +10,7 @@ interface RichTextEditorProps {
 const InternalRichTextEditor: React.ForwardRefRenderFunction<
   unknown,
   RichTextEditorProps
-> = (props) => {
+> = (props, ref) => {
   useEffect(() => {
     const editor = new E(`#${styles.richTextEditor}`);
     editor.create();

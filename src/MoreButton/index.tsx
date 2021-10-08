@@ -14,7 +14,7 @@ interface MoreButtonProps {
 const InternalMoreButton: React.ForwardRefRenderFunction<
   unknown,
   MoreButtonProps
-> = (props) => {
+> = (props, ref) => {
   const { showNumber = 4, spaceSize = 8 } = props;
 
   /**
